@@ -4,6 +4,8 @@ import uuid from 'uuid';
 
 import Notes from './Notes';
 
+import connect from '../libs/connect';
+
 const notes = [
   {
     id: uuid.v4(),
@@ -16,7 +18,8 @@ const notes = [
 ];
 
 
-export default class App extends React.Component {
+
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -39,6 +42,8 @@ export default class App extends React.Component {
     return (
       <div>
         
+        {this.props.test}
+
         <button className="add-note" onClick={this.addNote}>+</button>
 
         
@@ -104,3 +109,7 @@ export default class App extends React.Component {
   }
 
 }
+
+export default connect(() => ({
+  test: 'test'
+}))(App)
