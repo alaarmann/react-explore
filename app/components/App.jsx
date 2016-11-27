@@ -6,18 +6,6 @@ import Notes from './Notes';
 
 import connect from '../libs/connect';
 
-const notes = [
-  {
-    id: uuid.v4(),
-    task: 'Learn React'
-  },
-  {
-    id: uuid.v4(),
-    task: 'Do laundry'
-  }
-];
-
-
 
 class App extends React.Component {
 
